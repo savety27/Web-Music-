@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MUSIC COOOL</title>
+    
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: white;
+            text-align: center;
+            background-image: url('Lagu background.svg');
+            background-size: cover;
+        }
+
+
+        .banner {
+            width: 100%; 
+            height: auto; 
+            min-height: 300px; 
+            background-image: url('Banner MUsic .png'); 
+            background-size: cover; 
+            background-repeat: no-repeat; 
+            background-position: center; 
+            padding: 100px;
+            padding-top: 30px;
+            padding-left: 10px;
+            padding-right: 90px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+        .sidebar {
+            width: 200px;
+            background-color: #181818;
+            padding: 20px;
+            position: fixed;
+            height: 100%;
+            left: 0;
+            top: 0;
+            transition: width 0.3s ease;
+            box-shadow: 4px 0 10px rgba(0, 0, 0, 0.5);
+            z-index: 1000; 
+        }
+
+        .sidebar-logo {
+            width: 150px; 
+            position: absolute;
+            bottom: 20px; 
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+
+        .sidebar:hover {
+            width: 250px;
+        }
+
+        .main {
+            margin-left: 220px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: 'Monotype Corsiva';
+            position: relative;
+        }
+
+
+        h1, h2 {
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+        }
+
+        .playlist {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); 
+            gap: 20px;
+            padding: 20px;
+            justify-content: center;
+            width: 100%;
+            max-width: 1200px;
+            margin-top: 20px;
+        }
+
+        .song-card {
+            background-size: cover;
+            background-position: center;
+            padding: 10px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1); 
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            min-height: 300px;
+            position: relative;
+            transition: transform 0.3s, box-shadow 0.3s ease;
+        }
+
+        .song-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .song-card h3, .song-card p {
+            color: black;
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 5px;
+            border-radius: 5px;
+            display: inline-block;
+            margin: 5px 0;
+        }
+
+        .song-card audio {
+            width: 200%;
+            max-width: 250px;
+            margin-top: 5px;
+        }
+
+        .download-btn {
+            background-color: #046325;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 30px;
+            margin-top: 10px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .download-btn:hover {
+            background-color: #1ed760;
+            transform: scale(1.1);
+        }
+
+        .genre-link {
+            display: block;
+            margin: 10px 0;
+            color: #1DB954;
+            text-decoration: none;
+            font-family: 'Monotype Corsiva';
+            font-size: 20px;
+            text-align: left;
+            padding: 8px 16px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(255, 255, 255, 0.2);
+        }
+
+        .genre-link:hover {
+            text-decoration: underline;
+            background-color: #181818;
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="banner"></div>
+
+    <div class="sidebar">
+        <h2>GENRE SONG</h2>
+        
+        <a href="Cover.html" class="genre-link"> 🏠 Halaman Utama</a>
+        <a href="Spotify.html" class="genre-link"> 🌟 Pencarian Populer</a>
+        <a href="Spotify DJ.html" class="genre-link"> 🎸 DJ</a>
+        <a href="Spotify Pop.html" class="genre-link"> 🎧 POP</a>
+        <a href="Spotify Rock.html" class="genre-link">🎸ROCK</a>
+        <a href="Spotify Jazz.html" class="genre-link">🎧Jazz</a>
+        <a href="Spotify Hip-Hop.html" class="genre-link">🎸 Hip-Hop</a>
+        <a href="Spotify Religi.html" class="genre-link"> 🎧Religi</a>
+
+        <img src="Sweet.webp" alt="Logo" class="sidebar-logo">
+    </div>
+    
+    <div class="main">
+        <h2 style="font-size: 50px;margin-top: 0px;">💥💥Pencarian Populer 💥💥
+        </h2>
+
+        <div class="playlist">
+
+            <div class="song-card" style="background-image: url('Album\ forever\ young.jpg');">
+                <h3>Forever Young</h3>
+                <p>Alphaville</p>
+                <p>3:24</p>
+                <audio controls>
+                    <source src="Forever Young Song.mp4" type="audio/mpeg">
+                </audio>
+                <a href="Forever Young Song.mp4" download class="download-btn">Download</a>
+            </div>
+
+            <div class="song-card" style="background-image: url('Almbum\ about\ you.jpg');">
+                <h3>About You</h3>
+                <p>The 1975</p>
+                <p>4:54</p>
+                <audio controls>
+                    <source src="About You Song.mp4" type="audio/mpeg">
+                </audio>
+                <a href="About You Song.mp4" download class="download-btn">Download</a>
+            </div>
+
+            <div class="song-card" style="background-image: url('Album\ Cupid\ 2.jpg');">
+                <h3>Cupid</h3>
+                <p>Fifty Fifty</p>
+                <p>2:49</p>
+                <audio controls>
+                    <source src="Cupid Song.mp4" type="audio/mpeg">
+                </audio>
+                <a href="Cupid Song.mp4" download class="download-btn">Download</a>
+            </div>
+
+            <div class="song-card" style="background-image: url('Album\ die\ with\ a\ smile.png');">
+                <h3>Die With A Smile</h3>
+                <p>Lady Gaga dan Bruno Mars</p>
+                <p>4.06</p>
+                <audio controls>
+                    <source src="Die With A Smile Song.mp4" type="audio/mpeg">
+                </audio>
+                <a href="Die With A Smile Song.mp4" download class="download-btn">Download</a>
+            </div>
+
+            <div class="song-card" style="background-image: url('Album\ If\ Let\ You\ Go.jpg');">
+                <h3>If Let You Go</h3>
+                <p>Westlife</p>
+                <p>3:40</p>
+                <audio controls>
+                    <source src="Lagu If Let You Go.mp4" type="audio/mpeg">
+                </audio>
+                <a href="Lagu If Let You Go.mp4" download class="download-btn">Download</a>
+            </div>
+
+
+            <div class="song-card" style="background-image: url('Album\ Bird\ Of\ The\ Feather\ 2.jpeg');">
+                <h3>Birds Of The Feather</h3>
+                <p>Billie Elish</p>
+                <p>3:28</p>
+                <audio controls>
+                    <source src="Lagu Birds Of The Feather.mp4" type="audio/mpeg">
+                </audio>
+                <a href="Lagu Birds Of The Feather.mp4" download class="download-btn">Download</a>
+            </div>
+
+            <div class="song-card" style="background-image: url('Album\ The\ Shade.jpeg');">
+                <h3>The Shade</h3>
+                <p>Rex Orange Country</p>
+                <p>2:40</p>
+                <audio controls>
+                    <source src="Lagu The Shade.mp4" type="audio/mpeg">
+                </audio>
+                <a href="Lagu The Shade.mp4" download class="download-btn">Download</a>
+            </div>
+
+            <div class="song-card" style="background-image: url('Album\ Just\ The\ Way\ You\ Are.jpeg');">
+                <h3>Just The Way You Are</h3>
+                <p>Bruno Mars</p>
+                <p>3:18</p>
+                <audio controls>
+                    <source src="Lagu Just The Way You Are.mp4" type="audio/mpeg">
+                </audio>
+                <a href="Lagu Just The Way You Are.mp4" download class="download-btn">Download</a>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
